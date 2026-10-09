@@ -1,6 +1,6 @@
 [project]
 name = "ats-resume"
-version = "2.0.0"
+version = "2.0.1"
 description = "ATS resume checker, tailor and renderer (PDF/DOCX) with LinkedIn optimization. AI agent skill for Claude Code. English + Portuguese (PT-BR)."
 readme = "README.md"
 requires-python = ">=3.10"

@@ -1,6 +1,6 @@
 {
   "name": "ats-resume-optimizer",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Build, tailor and audit an ATS-safe resume/CV and LinkedIn profile. Zero fabrication. English + PT-BR.",
   "author": { "name": "Paulo Amaral", "url": "https://github.com/paulo-amaral" },
   "homepage": "https://github.com/paulo-amaral/ats-resume-optimizer",

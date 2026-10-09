@@ -136,7 +136,7 @@ def latex(items, s: dict, paper: str, lang: str) -> str:
     babel = "brazilian" if lang == "pt" else "english"
     head = [
         "% !TEX program = xelatex",
-        "% Compile with XeLaTeX or LuaLaTeX (Overleaf: Menu > Compiler > XeLaTeX) for ATS-safe text.",
+        "% Compile with XeLaTeX or LuaLaTeX for ATS-safe text. On Overleaf, set the compiler to XeLaTeX.",
         rf"\documentclass[{size},{'a4paper' if paper == 'a4' else 'letterpaper'}]{{article}}",
         r"\usepackage{iftex}",
         r"\ifPDFTeX",

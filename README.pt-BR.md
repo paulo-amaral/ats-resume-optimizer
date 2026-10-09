@@ -61,7 +61,7 @@ reproduz a nota interna de um ATS, e esta não finge que faz isso.
 | Agente | Instalação |
 | --- | --- |
 | **Claude Code** | `/plugin marketplace add paulo-amaral/ats-resume-optimizer` e depois `/plugin install ats-resume-optimizer@ats-resume-optimizer` |
-| **Claude Cowork** (desktop) | Customize → Plugins → **Add marketplace** → `paulo-amaral/ats-resume-optimizer` → Install |
+| **Claude Cowork** (desktop) | Em Customize, abra Plugins, escolha **Add marketplace**, informe `paulo-amaral/ats-resume-optimizer` e instale o plugin |
 | **OpenAI Codex** | `git clone https://github.com/paulo-amaral/ats-resume-optimizer && mkdir -p ~/.agents/skills && cp -R ats-resume-optimizer/skills/resume-ats-linkedin-optimizer ~/.agents/skills/` |
 | **Cursor, Gemini CLI e outros** | Abra este repositório no agente: o [`AGENTS.md`](AGENTS.md) diz o que fazer. Ou adicione a pasta `skills/resume-ats-linkedin-optimizer/` ao contexto. |
 
@@ -81,7 +81,7 @@ que nenhuma empresa, cargo, data ou contato foi inventado. Passo a passo: [`AGEN
 ## LaTeX
 
 `ats-resume render resume.json -o cv.tex` gera o código LaTeX para editar ou subir no
-Overleaf (escolha **Menu → Compiler → XeLaTeX**); `-o cv.pdf --latex` compila no seu
+Overleaf, onde o compilador precisa estar em XeLaTeX; `-o cv.pdf --latex` compila no seu
 computador com [Tectonic](https://tectonic-typesetting.github.io/), XeLaTeX ou LuaLaTeX.
 A saída é ajustada para a extração de texto dos ATS: kerning desligado, porque pares como
 "AW" e "Va" eram extraídos como palavras partidas ("A WS", "V arejo"). O pdfLaTeX não é

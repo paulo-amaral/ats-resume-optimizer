@@ -93,7 +93,7 @@ Three single-column, text-based templates. All pass the built-in ATS check.
 `compact` uses a serif font and tighter spacing to fit more on one page.
 
 **LaTeX.** `ats-resume render resume.json -o cv.tex` writes LaTeX source you can edit or
-upload to Overleaf (set **Menu → Compiler → XeLaTeX**); `-o cv.pdf --latex` compiles it
+upload to Overleaf, where the compiler must be set to XeLaTeX; `-o cv.pdf --latex` compiles it
 locally with [Tectonic](https://tectonic-typesetting.github.io/), XeLaTeX or LuaLaTeX.
 The LaTeX output is tuned for ATS text extraction: kerning is turned off, because kerned
 pairs like "AW" or "Va" extract as split words ("A WS", "V arejo"). pdfLaTeX is not used
@@ -108,7 +108,7 @@ The agent writes the words with you; `ats-resume` checks layout, keywords and tr
 | Agent | Install |
 | --- | --- |
 | **Claude Code** | `/plugin marketplace add paulo-amaral/ats-resume-optimizer` then `/plugin install ats-resume-optimizer@ats-resume-optimizer` |
-| **Claude Cowork** (desktop) | Customize → Plugins → **Add marketplace** → `paulo-amaral/ats-resume-optimizer` → Install |
+| **Claude Cowork** (desktop) | In Customize, open Plugins, choose **Add marketplace**, enter `paulo-amaral/ats-resume-optimizer` and install the plugin |
 | **OpenAI Codex** | `git clone https://github.com/paulo-amaral/ats-resume-optimizer && mkdir -p ~/.agents/skills && cp -R ats-resume-optimizer/skills/resume-ats-linkedin-optimizer ~/.agents/skills/` |
 | **Cursor, Gemini CLI, others** | Open this repository in the agent: [`AGENTS.md`](AGENTS.md) tells it what to do. Or add the `skills/resume-ats-linkedin-optimizer/` folder to its context. |
 
@@ -125,12 +125,9 @@ every other section as raw text for the agent to structure, asking you when some
 is ambiguous. Your original stays the source of truth: `ats-resume validate` proves no
 employer, title, date or contact detail was invented. Step-by-step flow: [`AGENTS.md`](AGENTS.md).
 
-The skill runs a gated workflow:
-
-```text
-Intake → Master Profile → Metric Excavation → Content → ATS Formatting
-       → Keyword Tailoring → Render → Evaluate → (LinkedIn)
-```
+The skill works in phases and finishes each one before starting the next: intake,
+Master Profile, metric excavation, content, ATS formatting, keyword tailoring, rendering,
+evaluation and, when asked, LinkedIn.
 
 The **Master Profile** is your private record of everything you have done. Every resume
 is a *selection* from it, never an invention on top of it.
@@ -156,7 +153,7 @@ src/ats_resume/        CLI, TUI, checks, renderer, importer (Python package)
 skills/…/SKILL.md      the AI agent workflow (start here for the skill)
 skills/…/references/   ATS, bullets, keywords, LinkedIn, scoring, myths, cover letters, Brazil
 skills/…/assets/       schema, templates, verb banks and cliché lists (EN + PT-BR)
-tests/                 pytest suite, including render → re-parse round trips and the TUI
+tests/                 pytest suite: renders every format, reads it back, and drives the TUI
 ```
 
 ## Develop

@@ -99,7 +99,7 @@ Add `--json` to `check` to read results programmatically.
 | Command | Use it for |
 |---|---|
 | `ats-resume check cv.pdf --job job.txt` | Audit any .pdf/.docx/.txt/.json: ATS file hygiene, de-slop, keyword coverage |
-| `ats-resume import cv.pdf -o resume.json` | Existing resume → JSON skeleton (contacts, summary, skills + raw text per section in `_import`) |
+| `ats-resume import cv.pdf -o resume.json` | Turn an existing resume into a JSON skeleton (contacts, summary, skills, plus raw text per section in `_import`) |
 | `ats-resume new --lang pt` | Example `resume.json` to fill (EN or PT-BR) |
 | `ats-resume render resume.json -o Name-Resume.pdf -t classic\|modern\|compact` | ATS-safe PDF/DOCX |
 | `ats-resume render resume.json -o cv.tex` / `-o cv.pdf --latex` | LaTeX source (e.g. for Overleaf) / compiled LaTeX PDF with a verified text layer |

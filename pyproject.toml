@@ -1,0 +1,53 @@
+[project]
+name = "ats-resume"
+version = "2.0.0"
+description = "ATS resume checker, tailor and renderer (PDF/DOCX) with LinkedIn optimization. AI agent skill for Claude Code. English + Portuguese (PT-BR)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Paulo Amaral" }]
+keywords = [
+  "resume", "cv", "ats", "applicant-tracking-system", "linkedin", "resume-builder",
+  "resume-parser", "job-search", "claude-code", "agent-skill", "curriculo",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Natural Language :: English",
+  "Natural Language :: Portuguese (Brazilian)",
+  "Topic :: Office/Business",
+]
+dependencies = [
+  "python-docx>=1.1.0",
+  "reportlab>=4.0.0",
+  "pypdf>=4.0.0",
+]
+
+[project.optional-dependencies]
+tui = ["textual>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/paulo-amaral/ats-resume-optimizer"
+Upstream = "https://github.com/artificialguybr/resume-ats-linkedin-optimizer"
+
+[project.scripts]
+ats-resume = "ats_resume.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6", "textual>=1.0"]
+
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 130
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

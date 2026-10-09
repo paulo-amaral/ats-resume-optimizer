@@ -1,0 +1,25 @@
+# generated resumes and local data (may contain personal information)
+*.pdf
+*.docx
+resume.json
+master-profile*.json
+scratch_*
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+
+# os / editor / local agents
+.DS_Store
+.idea/
+.vscode/
+.kilo/
+*.tex
+*.aux
+*.log
+*.out

@@ -1,0 +1,56 @@
+{
+  "lang": "pt",
+  "basics": {
+    "name": "Ana Exemplo",
+    "headline": "Engenheira de Dados Sênior",
+    "email": "ana.exemplo@example.com",
+    "phone": "+55 11 90000-0000",
+    "location": "São Paulo, SP",
+    "linkedin": "linkedin.com/in/ana-exemplo",
+    "github": "github.com/ana-exemplo"
+  },
+  "summary": "Engenheira de dados com 7 anos em pipelines batch e streaming no setor financeiro. Reduzi em 68% o tempo do principal ETL e entreguei uma plataforma de dados usada por mais de 400 analistas. Busco uma posição sênior com responsabilidade sobre infraestrutura de dados.",
+  "experience": [
+    {
+      "title": "Engenheira de Dados",
+      "company": "Pagamentos Exemplo S.A.",
+      "location": "São Paulo, SP",
+      "start": "mar. 2021",
+      "end": "Atual",
+      "bullets": [
+        "Reduzi o ETL noturno de transações de 5 horas para 95 minutos (68%) ao reescrever o pipeline em Spark e particionar por estabelecimento, liberando os relatórios da manhã para mais de 400 analistas.",
+        "Construí um pipeline de sinais de fraude em streaming (Kafka, Flink) com 12 milhões de eventos por dia e latência abaixo de 1 segundo, usado pelo modelo de risco em tempo real.",
+        "Cortei 32% do custo de dados em nuvem (R$ 2,1 milhões por ano) com armazenamento em camadas e a desativação de mais de 60 jobs sem uso.",
+        "Liderei a migração de 240 jobs SQL legados para dbt, reduzindo em 40% o tempo de build e dando linhagem self-service aos analistas."
+      ]
+    },
+    {
+      "title": "Analytics Engineer",
+      "company": "Varejo Exemplo Ltda.",
+      "location": "Remoto",
+      "start": "jun. 2018",
+      "end": "fev. 2021",
+      "bullets": [
+        "Projetei o primeiro data warehouse da empresa (Snowflake), unificando 9 sistemas de origem para mais de 50 áreas usuárias.",
+        "Automatizei o relatório semanal da diretoria, economizando cerca de 15 horas por semana da equipe de analytics."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bacharelado",
+      "field": "Ciência da Computação",
+      "institution": "Universidade Exemplo",
+      "location": "São Paulo, SP",
+      "end": "2018"
+    }
+  ],
+  "skills": [
+    { "category": "Técnicas", "items": ["Python", "SQL", "Spark", "Apache Kafka", "Apache Flink"] },
+    { "category": "Ferramentas", "items": ["dbt", "Snowflake", "Airflow", "AWS", "Terraform"] },
+    { "category": "Idiomas", "items": ["Português (nativo)", "Inglês (avançado)"] }
+  ],
+  "certifications": [
+    { "name": "AWS Certified Data Engineer – Associate", "issuer": "Amazon Web Services", "year": "2024" }
+  ]
+}

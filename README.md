@@ -164,12 +164,6 @@ uv run pytest
 uv run ruff check .
 ```
 
-## Credits
-
-Based on [artificialguybr/resume-ats-linkedin-optimizer](https://github.com/artificialguybr/resume-ats-linkedin-optimizer)
-by João Vitor Amaral (MIT). This fork adds the installable CLI, the terminal app,
-PDF/DOCX import and audit, three templates, Portuguese (PT-BR) support, tests and CI.
-
 ## License
 
 MIT. See [LICENSE](LICENSE).

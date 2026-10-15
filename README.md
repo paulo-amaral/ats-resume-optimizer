@@ -108,7 +108,7 @@ The agent writes the words with you; `ats-resume` checks layout, keywords and tr
 | Agent | Install |
 | --- | --- |
 | **Claude Code** | `/plugin marketplace add paulo-amaral/ats-resume-optimizer` then `/plugin install ats-resume-optimizer@ats-resume-optimizer` |
-| **Claude Cowork** (desktop) | In Customize, open Plugins, choose **Add marketplace**, enter `paulo-amaral/ats-resume-optimizer` and install the plugin |
+| **Claude Cowork** (desktop) | In Customize, open Plugins, choose **Add marketplace**, **add from repository** enter `paulo-amaral/ats-resume-optimizer` and install the plugin |
 | **OpenAI Codex** | `git clone https://github.com/paulo-amaral/ats-resume-optimizer && mkdir -p ~/.agents/skills && cp -R ats-resume-optimizer/skills/resume-ats-linkedin-optimizer ~/.agents/skills/` |
 | **Cursor, Gemini CLI, others** | Open this repository in the agent: [`AGENTS.md`](AGENTS.md) tells it what to do. Or add the `skills/resume-ats-linkedin-optimizer/` folder to its context. |
 
